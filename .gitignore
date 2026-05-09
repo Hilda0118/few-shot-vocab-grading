@@ -1,0 +1,9 @@
+embeddings/
+outputs.zip
+outputs/
+.idea/
+__pycache__/
+*.pyc
+*.pyo
+.ipynb_checkpoints/
+*.log
