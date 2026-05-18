@@ -4,7 +4,7 @@ import time
 import concurrent.futures
 from tqdm import tqdm
 
-API_KEY = "sk-b42c7358cde14a86a4a08da1a5038901"
+API_KEY = "yourownkey"
 API_URL = "https://api.deepseek.com/chat/completions"
 MAX_WORKERS = 10
 
