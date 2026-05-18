@@ -94,11 +94,11 @@ class Embedder:
         rs = np.random.RandomState(abs(hash(w)) % (2 ** 32))
         return rs.uniform(-1e-4, 1e-4, self.dim).astype(np.float32)
 
-    def transform(self, words, sentences=None):
+    def transform(self, words, sentences=None, use_context=True):
         # ── SBERT 语义向量 ──────────────────────────────────
         X_text = np.zeros((len(words), self.dim), dtype=np.float32)
         if self.mode == "sbert" and self.model is not None:
-            if sentences is not None:
+            if sentences is not None and use_context:
                 texts_to_encode = [
                     f'Target Word: "{w}". Context: {s}'
                     for w, s in zip(words, sentences)
